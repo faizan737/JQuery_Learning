@@ -1,0 +1,252 @@
+<!--   Jquery HTML  -->
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="JqueryHTMLExamples.js"></script>
+</head>
+<body>
+<h1>JQuery HTML Examples</h1>
+<h2>Jquery Get Content- Text(), html(), val()</h2>
+<br>
+<h3>Text and html example</h3>
+<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+
+<button id="btn1">Show Text</button>
+<button id="btn2">Show HTML</button>
+<br>
+<h3>Val example</h3>
+<p>Name: <input type="text" id="test_input" value="Mickey Mouse"></p>
+
+<button id="show_val">Show Value</button>
+<br>
+<h3>Get Attributes example</h3>
+<p><a href="https://www.w3schools.com" id="link_get">W3Schools.com</a></p>
+
+<button id="btn_attr_get">Show href Value</button>
+<br>
+<hr>
+<h2>Jquery Set Content- Text(), html(), val()</h2>
+<br>
+<h3>Text, html and val example</h3>
+<p id="set_test1">This is a paragraph.</p>
+<p id="set_test2">This is another paragraph.</p>
+
+<p>Input field: <input type="text" id="set_test3" value="Mickey Mouse"></p>
+
+<button id="btn1_set">Set Text</button>
+<button id="btn2_set">Set HTML</button>
+<button id="btn3_set">Set Value</button>
+<br>
+
+<h3>A Callback Function for text(), html(), and val()</h3>
+<p>All of the three jQuery methods above: text(), html(), and val(), also come with a callback function. </p>
+<p>The callback function has two parameters: the index of the current element in the list of elements selected and the original (old) value. </p>
+<p>You then return the string you wish to use as the new value from the function.</p>
+
+<p id="test_oldText">This is a <b>bold</b> paragraph.</p>
+<p id="test_oldHtml">This is another <b>bold</b> paragraph.</p>
+
+<button id="btn_oldText_set">Show Old/New Text</button>
+<button id="btn_oldHTML_set">Show Old/New HTML</button>
+
+<br>
+<h3>For Attributes</h3>
+<p><a href="https://www.w3schools.com" title="some title" id="w3s">W3Schools.com</a></p>
+
+<button id="btn_attrset">Change href and title</button>
+
+<p>Mouse over the link to see that the href attribute has changed and a title attribute is set.</p>
+<br>
+<h3> Acallback function for attr method</h3>
+<p><a href="https://www.w3schools.com" id="w3s_callback">W3Schools.com</a></p>
+
+<button id="btn_attrcallback">Change href Value</button>
+
+<p>Mouse over the link (or click on it) to see that the value of the href attribute has changed.</p>
+<br>
+<hr>
+<h1>Jquery Add element</h1>
+<h3>Append</h3>
+<p id="p_add" class="p_add1">This is a paragraph.</p>
+<p id="p_add" class="p_add1">This is another paragraph.</p>
+
+<ol id="oi_add">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+
+<button id="btn_append1">Append text</button>
+<button id="btn_append2">Append list items</button>
+<button id="btn_prepend1">Prepend text</button>
+<button id="btn_prepend2">Prepend list item</button>
+<br>
+<h3>Add Several New Elements With append() and prepend()</h3>
+<p>
+    In both examples above, we have only inserted some text/HTML at the beginning/end of the selected HTML elements.
+However, both the append() and prepend() methods can take an infinite number of new elements as parameters. 
+The new elements can be generated with text/HTML (like we have done in the examples above), with jQuery, or with JavaScript code and DOM elements.
+
+In the following example, we create several new elements. The elements are created with text/HTML, jQuery, and JavaScript/DOM. Then we append the new elements to the text with the append() method (this would have worked for prepend() too) :
+</p>
+<script>
+    function appendText() {
+      var txt1 = "<p>Text.</p>";        // Create text with HTML
+      var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+      var txt3 = document.createElement("p");
+      txt3.innerHTML = "Text.";         // Create text with DOM
+      $("body").append(txt1, txt2, txt3);   // Append new elements
+    }
+    </script>
+<p>This is a paragraph.</p>
+<button id="btn_append1" onclick="appendText()">Append text</button>
+<button id="btn_prepend3">Prepend text</button>
+<br>
+<h3>After and before methods</h3>
+<p id="p_after">This is paragraph</p>
+<button id="btn_before">Insert before</button>
+<button id="btn_after">Insert after</button>
+<h3>Adding new elements before and after</h3>
+<hr id="hr_after">
+<button id="btn_after2">Before and After</button>
+<br>
+<hr>
+<h1>Jquery Remove Element/Content</h1>
+<h3>Remove Element</h3>
+<div id="div_remove" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+    This is some text in the div.
+    <p>This is a paragraph in the div.</p>
+    <p>This is another paragraph in the div.</p>
+    
+    </div>
+    <br>
+    
+    <button id="btn_remove">Remove div element</button>
+    <h3>Empty the element child</h3>
+    <div id="div_empty" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+        This is some text in the div.
+        <p>This is a paragraph in the div.</p>
+        <p>This is another paragraph in the div.</p>
+        
+        </div>
+        <br>
+        
+        <button id="btn_empty">Empty div element</button>
+        <br>
+        <h3>Filter the Elements to be Removed</h3>
+        <style>
+            .test {
+              color: red;
+              font-size: 20px;
+            }
+            .demo {
+  color: green;
+  font-size: 25px;
+}
+            </style>
+        <p>The jQuery remove() method also accepts one parameter, which allows you to filter the elements to be removed.
+            
+            The parameter can be any of the jQuery selector syntaxes.
+            
+            The following example removes all < p> elements with class="test":</p>
+
+<p>This is a paragraph.</p>
+<p class="test">This is another paragraph.</p>
+<p class="test">This is another paragraph.</p>
+<p class="demo">This is p element with class="demo".</p>
+<button id="btn_class">Remove all p elements with class="test"</button>
+<button id="btn_class2">Remove all p elements with class="test" and class="demo"</button>
+<br>
+<br><hr>
+<style>
+  .important {
+    font-weight: bold;
+    font-size: xx-large;
+  }
+  
+  .blue {
+    color: blue;
+  }
+  </style>
+  <h1>JQuery GET and Set CSS</h1>
+  <H2>JQuery CSS Manipulations</H2>
+  <h3>JQuery Add / Remove/Toggle Classes</h3>
+  
+  <h1 id="head1">Heading 1</h1>
+  <h2 id="head2">Heading 2</h2>
+
+<p id="par1">This is a paragraph.</p>
+<p id="par2">This is another paragraph.</p>
+
+<div id="divcss1">This is some important text!</div><br>
+
+<button id="btnAddCss">Add classes to elements</button>
+<button id="btnRemCss">Remove classes to elements</button>
+<button id="btnTogCss">Toggle classes to elements</button>
+<br>
+<h3>CSS return attribute</h3>
+<p id="par3" style="background-color:#ff0000">This is a paragraph.</p>
+<button id="btnGetCss">Return BackgroundColor</button>
+<br>
+<h3>CSS Set attribute</h3>
+<p id="par4" style="background-color:#ff0000">This is a paragraph.</p>
+<button id="btnSetCss">Set BackgroundColor</button>
+<button id="btnSetMulCss">Set multiple Style</button>
+<br><hr>
+<h1>JQuery Dimensions</h1>
+<h3>Height() and Width()</h3>
+<style>
+  .div_dim {
+    height: 100px;
+    width: 300px;
+    padding: 10px;
+    margin: 3px;
+    border: 1px solid blue;
+    background-color: lightblue;
+  }
+  </style>
+  <div id="div_dim" class="div_dim"></div>
+  <br>
+  
+  <button id="btn_dim">Display dimensions of div</button>
+  
+  <p>width() - returns the width of an element.</p>
+  <p>height() - returns the height of an element.</p>
+<br>
+<h3>innerHeight and innerWidth</h3>
+<div id="div_dim2" class="div_dim"></div>
+<br>
+<button id="btn_innerdim">Display dimensions of div</button>
+
+<p>innerWidth() - returns the width of an element (includes padding).</p>
+<p>innerHeight() - returns the height of an element (includes padding).</p>
+<br>
+<h3>OuterHeight and OuterWidth</h3>
+<div id="div_dim3" class="div_dim"></div>
+<br>
+<button id="btn_outerdim">Display dimensions of div</button>
+
+<p>outerWidth() - returns the width of an element (includes padding and border).</p>
+<p>outerHeight() - returns the height of an element (includes padding and border).</p>
+<br>
+<h3>OuterHeight(true) and OuterWidth(true)</h3>
+<div id="div_dim4" class="div_dim"></div>
+<br>
+<button id="btn_outerdim2">Display dimensions of div</button>
+
+<p>outerWidth(true) - returns the width of an element (includes padding, border, and margin).</p>
+<p>outerHeight(true) - returns the height of an element (includes padding, border, and margin).</p>
+<br>
+<h3>Check demission of Windows and Document</h3>
+<button id="btn_dim2">Display dimensions of document and window</button>
+<br>
+<h3>Set the demission of element</h3>
+<div id="div_setdim" class="div_dim"></div>
+<br>
+
+<button id="btn_setdim">Resize div</button>
+</body>
+</html>

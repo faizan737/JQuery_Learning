@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <script type="text/javascript" src="jquery-3.7.1.min.js">
+
+        </script>
+        <script type="text/javascript" src="EffectsExamples.js"></script>
+        <!-- for Event sliding I am using following style-->
+        <style> 
+            #panel, #flip {
+              padding: 5px;
+              text-align: center;
+              background-color: #e5eecc;
+              border: solid 1px #c3c3c3;
+            }
+            
+            #panel {
+              padding: 50px;
+              display: none;
+            }
+            </style>
+            <!-- Above Style for Sliding Event end-->
+    </head>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+<p id="101">My Second paragraph.</p>
+<script type="text/javascript" src="first.js"></script>
+<script type="text/javascript" src="Second.js"></script>
+<br>
+<div>
+    <form>
+        <label>First Name:  <input type="text" name="firstName" placeholder="first Name" required></label>
+        <br>
+        <label>Last Name:  <input type="text" name="lastName" placeholder="Last Name" required></label>
+        <br>
+
+        <label>Male <input type="radio" name="gender" value="Male"></label>
+        <label>Female <input type="radio" name="gender" value="Female"></label>
+        <label>Other <input type="radio" name="gender" value="Other"></label>
+    
+        <label>Email: <input type="email" name="email" placeholder="ABC@xyz.com" required></label>
+
+        <label>Password: <input type="password" name="password" placeholder="Your Password here" pattern=".{5,10}" required 
+            title="Please enter password of length 5 to 10"></label>
+            <br>
+
+            <label for="">Birthday: </label>
+            <select id="birthday" name="Month">
+                <option>Month</option>
+                <option>Jan</option>
+                <option>Fab</option>
+                <option>Mar</option>
+                <option>Api</option>
+                <option>May</option>
+                <option>Jun</option>
+                <option>Jul</option>
+                <option>Aug</option>
+                <option>Sep</option>
+                <option>Oct</option>
+                <option>Nov</option>
+                <option>Dec</option>
+            </select>
+            <select id="birthday" name="Day">
+                <option>Day</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+            </select>
+            <select id="birthday" name="Year">
+                <option>Year</option>
+                <option>1990</option>
+                <option>1991</option>
+                <option>1992</option>
+                <option>1993</option>
+                <option>1994</option>
+                <option>1995</option>
+                <option>1996</option>
+                <option>1997</option>
+                <option>1998</option>
+                <option>1999</option>
+                <option>2000</option>
+                <option>2001</option>
+                <option>2002</option>
+                <option>2003</option>
+                <option>2004</option>
+                <option>2005</option>
+                <option>2006</option>
+                <option>2007</option>
+                <option>2008</option>
+                <option>2009</option>
+                <option>2010</option>
+            </select><br>
+
+            <label>I agree to the terms and condition
+                <input type="checkbox" name="check_agree">
+            </label><br>
+
+            <input type="submit" name="Submit">
+    </form>
+</div>
+<br>
+<hr>
+<h1>Fading Events example</h1>
+<h3>FadeIn()</h3>
+
+<p>Demonstrate fadeIn() with different parameters.</p>
+
+<button id="button1">Click to fade in boxes</button><br><br>
+
+<h3>FadeOut()</h3>
+<p>Demonstrate fadeOut() with different parameters.</p>
+
+<button id="button2">Click to fade out boxes</button><br><br>
+
+<h3>FadeToggle()</h3>
+<p>Demonstrate fadeToggle() with different speed parameters.</p>
+
+<button id="button3">Click to fade in/out boxes</button><br><br>
+
+<h3>FadeTo()</h3>
+<p>Demonstrate fadeTo() with different parameters.</p>
+
+<button id="button4" >to fade boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;display:none; background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none; background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none; background-color:blue;"></div>
+<br>
+<hr>
+
+<h1>Sliding Events example</h1>
+<h3>SlideDown()</h3>
+<div id="flip1">Click to slide down panel</div>
+<h3>SlideUp()</h3>
+<div id="flip2">Click to slide Up panel</div>
+<h3>SlideToggle()</h3>
+<div id="flip3">Click to slide Up/Down panel</div>
+
+<div id="panel">Hello world!</div>
+
+<hr>
+<h1>Animation example</h1>
+<h3>animate({left:'250px'})</h3>
+<button id="button_anim1">Start Animation</button>
+
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+<div id="div_anim1" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+<br><br><br><br ><br>
+<h3>animation - Manipulate Multiple Properties</h3>
+<button id="button_anim2">Start Animation</button>
+<div id="div_anim2" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+<br><br><br><br ><br>
+<br><br>
+<h3>animation - Using Relative Values</h3>
+<button id="button_anim3">Start Animation</button>
+<div id="div_anim3" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+<br><br><br><br ><br>
+<br><br>
+<h3>animation - Using Pre-defined Values  => "show","hide" or "toggle"</h3>
+<p>Click the button multiple times to toggle the animation.</p>
+<button id="button_anim4">Start Animation</button>
+<div id="div_anim4" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+<br><br><br><br ><br>
+<br><br>
+<h3>animation - Uses Queue Functionality</h3>
+<p>multiple animate() calls ONE by ONE</p>
+<button id="button_anim5">Start Animation</button>
+<button id="button_anim5_2">Start Animation 2</button>
+<div id="div_anim5" style="background:#98bf21;height:100px;width:100px;position:absolute;"> Hello</div>
+
+<br><br><br><br ><br>
+<br><br><hr>
+<h1>jQuery Stop Method </h1>
+<p>The jQuery stop() method is used to stop animations or effects before it is finished.</p>
+<p>Syntax: $(selector).stop(stopAll,goToEnd);</p>
+<h3>Stoping Slideing Event</h3>
+<br>
+<style> 
+    #panel_stop, #flip_stop {
+      padding: 5px;
+      font-size: 18px;
+      text-align: center;
+      background-color: #555;
+      color: white;
+      border: solid 1px #666;
+      border-radius: 3px;
+    }
+    
+    #panel_stop {
+      padding: 50px;
+      display: none;
+    }
+</style>
+<button id="stop_slide">Stop sliding</button>
+
+<div id="flip_stop">Click to slide down panel</div>
+<div id="panel_stop">Hello world!</div>
+<br><br><br><br><br><br><br>
+<h3>Stoping Animation</h3>
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+<button id="stop2">Stop all</button>
+<button id="stop3">Stop but finish</button>
+
+<p>The "Start" button starts the animation.</p>
+<p>The "Stop" button stops the current active animation, but allows the queued animations to be performed afterwards.</p>
+<p>The "Stop all" button stops the current active animation and clears the 
+animation queue; so all animations on the element is stopped.</p>
+<p>The "Stop but finish" rushes through the current active animation, then it stops.</p> 
+
+<div id="div_stop" style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
+<br><br><br><br><br><br><br>
+<hr>
+<h1>jQuery CallBack Method </h1>
+<p>JavaScript statements are executed line by line. However, with effects, the next line of code can be run even though the effect is not finished. This can create errors.</p>
+<p>To prevent this, you can create a callback function.</p>
+<p>A callback function is executed after the current effect is finished.</p>
+<p>Typical syntax: $(selector).hide(speed,callback);</p>
+
+<h3>Example with Callback Method</h3>
+<h5>The example below has a callback parameter that is a function that will be executed after the hide effect is completed:</h5><br>
+<button id="btn_callback">hide</button>
+<p id="hide_callback">This Paragraph with some content</p>
+<br><br>
+<h3>Example without Callback Method</h3>
+<h5>The example below has no callback parameter, and the alert box will be displayed before the hide effect is completed:</h5><br>
+<button id="btn_nocallback">hide</button>
+<p id="hide_nocallback">This Paragraph with some content</p>
+<br><hr><br>
+
+<h1>jQuery Method Chaining </h1>
+<p>Until now we have been writing jQuery statements one at a time (one after the other).</p>
+<P>However, there is a technique called chaining, that allows us to run multiple jQuery commands, one after the other, on the same element(s).</P> 
+<p>Tip: This way, browsers do not have to find the same element(s) more than once.</p>
+    
+    <p>To chain an action, you simply append the action to the previous action.</p>
+    
+    <p> following example chains together the css(), slideUp(), and slideDown() methods. The "p1" element first changes to red, then it slides up, and then it slides down: </p>
+<br>
+<h3>Example</h3>
+
+    <p id="p1">jQuery is fun!!</p>
+
+<button id="button_chain">Click me</button>
+
+</body>
+</html>
+
